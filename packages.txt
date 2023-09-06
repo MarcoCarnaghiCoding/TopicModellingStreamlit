@@ -1,7 +1,0 @@
-pandas
-spacy
-en-core-web-sm
-gensim
-streamlit
-matplotlib
-numpy
