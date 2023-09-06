@@ -1,6 +1,6 @@
 #import pandas as pd
 import spacy
-import en_core_web_sm
+#import en_core_web_sm
 from gensim.corpora.dictionary import Dictionary
 from gensim.models import LdaMulticore
 
@@ -27,12 +27,14 @@ def get_topics(review_text=''):
     9. Customer Support, enjoyable atmosphere and Afforable
     '''
     # Load the spaCy model
+    nlp = spacy.load('./en_core_web_sm-3.0.0/en_core_web_sm/en_core_web_sm-3.0.0')
+    '''
     try:
         nlp = nlp = en_core_web_sm.load()
     except:
         # Load the spaCy model
         nlp = spacy.load('./en_core_web_sm-3.0.0/en_core_web_sm/en_core_web_sm-3.0.0')
-
+    '''
     # Tags you want to remove from the text
     removal = ['ADV', 'PRON', 'CCONJ', 'PUNCT', 'PART', 'DET', 'ADP', 'SPACE', 'NUM', 'SYM', 'SCONJ', 'ADP', 'ADJ']
 
